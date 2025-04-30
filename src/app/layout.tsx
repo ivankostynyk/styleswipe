@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs';
+
+const supabase = createBrowserSupabaseClient(
+  {
+    supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    supabaseKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  }
+);
+
+// 👉 Quick connection test – will log [] or an error
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

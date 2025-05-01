@@ -1,11 +1,5 @@
 import "./globals.css";
-export const metadata = { title: 'StyleSwipe', description: '...' };
-import './globals.css'
-
-export const metadata: Metadata = {
-  title: 'StyleSwipe',
-  description: 'A fast, searchable image library',
-}
+export const metadata = { title: 'StyleSwipe', description: 'A fast, searchable image library' };
 
 export default function RootLayout({
   children,
